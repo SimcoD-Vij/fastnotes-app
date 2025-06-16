@@ -26,36 +26,42 @@ A fullstack note-taking web application built with **FastAPI** (backend) and **V
 
 ---
 
-## 📁 Project Structure
-
 notes-app/
 │
 ├── Backend/
 │   ├── notes_api/
-│   │   ├── main.py                  # 🚀 App entry point
-│   │   ├── config.py                # App settings
-│   │   ├── database.py              # DB setup
-│   │   ├── models.py                # SQLAlchemy models
-│   │   ├── schemas.py               # Pydantic schemas
-│   │   ├── auth_utils.py            # Password hashing + JWT logic
+│   │   ├── __init__.py
+│   │   ├── main.py             # 🚀 App entry point
+│   │   ├── config.py           # App settings (SECRET_KEY, etc.)
+│   │   ├── database.py         # SQLAlchemy DB engine + session logic
+│   │   ├── models.py           # SQLAlchemy models (User, Note)
+│   │   ├── schemas.py          # Pydantic schemas for validation
+│   │   ├── auth_utils.py       # Password hashing + JWT handling
 │   │   └── routers/
-│   │       ├── auth_routes.py       # /register, /login, /profile
-│   │       └── notes.py             # CRUD for notes
-│   └── requirements.txt
+│   │       ├── __init__.py
+│   │       ├── auth_routes.py  # /register, /login, /profile
+│   │       └── notes.py        # CRUD for notes
+│   ├── requirements.txt
+│   └── (Optional folders: venv/, migrations/, logs/)
 │
 ├── Frontend/
+│   ├── public/
+│   │   └── index.html
 │   ├── src/
 │   │   ├── pages/
 │   │   │   ├── Register.jsx
 │   │   │   ├── Login.jsx
 │   │   │   └── Notes.jsx
 │   │   ├── services/
-│   │   │   └── api.js               # API functions
+│   │   │   └── api.js          # Axios-based API interactions
 │   │   ├── App.js
 │   │   └── main.jsx
-│   └── package.json
+│   ├── package.json
+│   ├── vite.config.js
+│   └── (Optional: .env, dist/, node_modules/)
+│
+└── README.md
 
----
 
 ## 🔐 Features
 
