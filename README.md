@@ -26,6 +26,7 @@ A fullstack note-taking web application built with **FastAPI** (backend) and **V
 
 ---
 
+```
 notes-app/
 │
 ├── Backend/
@@ -61,6 +62,8 @@ notes-app/
 │   └── (Optional: .env, dist/, node_modules/)
 │
 └── README.md
+```
+
 
 
 ## 🔐 Features
